@@ -1,19 +1,24 @@
 extends CharacterBody2D
 var has_grenade = true
 var has_laser = true
+var player_speed = 500
 signal laser(laser_position, laser_direction)
 signal grenade(grenade_position, grenade_direction)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	var direction = Input.get_vector("left","right","up","down")
-	velocity = direction * 500
+	velocity = direction * player_speed
 	move_and_slide()
 	look_at(get_global_mouse_position())
 	handle_actions()
 	
 		
 func handle_actions():
+	if Input.is_action_pressed("sprint"):
+		player_speed = 1000
+	else:
+		player_speed = 500
 	var direction = (get_global_mouse_position() - position).normalized()	
 	if Input.is_action_pressed("primary") and has_laser:
 		#Randomly select a marker 2d for the laser startin position
@@ -29,7 +34,6 @@ func handle_actions():
 		var selected_grenade_marker = grenade_markers[randi() % grenade_markers.size()]
 		has_grenade = false
 		$GrenadeTimer.start()
-		print(selected_grenade_marker.global_position)
 		#direction between 2 vectors. Needs normalization because of the possible mouse positions.
 		grenade.emit(selected_grenade_marker.global_position, direction)
 

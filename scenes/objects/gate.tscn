@@ -4,6 +4,8 @@
 [ext_resource type="Script" path="res://scenes/objects/gate.gd" id="1_lqugp"]
 
 [node name="Gate" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
 script = ExtResource("1_lqugp")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
@@ -20,6 +22,7 @@ texture = ExtResource("1_0d1xn")
 position = Vector2(357, 281)
 rotation = 0.261799
 scale = Vector2(0.5, 0.5)
+collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-39.8754, 52.0956, -52.2715, -79.1688, 308.467, -177.899, 687.628, -277.424, 748.459, -150.856)
