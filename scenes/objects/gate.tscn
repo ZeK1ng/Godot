@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck7swwil1qdqy"]
+
+[ext_resource type="Texture2D" uid="uid://dp8lthks814rh" path="res://graphics/objects/gate.png" id="1_0d1xn"]
+[ext_resource type="Script" path="res://scenes/objects/gate.gd" id="1_lqugp"]
+
+[node name="Gate" type="StaticBody2D"]
+script = ExtResource("1_lqugp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(505, -73)
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-1436, -776, -1430, 572, -1396, 650, -1366, 694, -1288, 748, -1220, 772, -376, 772, -376, 532, 500, 536, 494, 770, 1348, 776, 1428, 746, 1494, 694, 1532, 640, 1558, 564, 1562, 80, 1556, -776)
+
+[node name="gateImg" type="Sprite2D" parent="."]
+position = Vector2(505, -73)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0d1xn")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(357, 281)
+rotation = 0.261799
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-39.8754, 52.0956, -52.2715, -79.1688, 308.467, -177.899, 687.628, -277.424, 748.459, -150.856)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
