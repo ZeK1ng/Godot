@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqtacx6lvc86b"]
+[gd_scene load_steps=4 format=3 uid="uid://bqtacx6lvc86b"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sxof6"]
-[ext_resource type="PackedScene" uid="uid://cd8b71vcnu7ju" path="res://scenes/enemies/drone.tscn" id="3_7barg"]
 [ext_resource type="PackedScene" uid="uid://ck7swwil1qdqy" path="res://scenes/objects/gate.tscn" id="4_0ejgr"]
 [ext_resource type="PackedScene" uid="uid://by7hpyyyiw424" path="res://scenes/players/player.tscn" id="4_pabu3"]
-[ext_resource type="Script" path="res://scenes/enemies/drone.gd" id="4_w8jvj"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_sxof6")
@@ -15,9 +13,9 @@ position = Vector2(27, -144)
 [node name="Player" parent="." instance=ExtResource("4_pabu3")]
 position = Vector2(601, 515)
 
-[node name="Drone" parent="." instance=ExtResource("3_7barg")]
-position = Vector2(153, 467)
-script = ExtResource("4_w8jvj")
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.7, 0.7)
+position_smoothing_enabled = true
 
 [node name="Projectiles" type="Node2D" parent="."]
 
