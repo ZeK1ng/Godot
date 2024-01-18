@@ -21,6 +21,7 @@ func handle_actions():
 		player_speed = 500
 	var direction = (get_global_mouse_position() - position).normalized()	
 	if Input.is_action_pressed("primary") and has_laser:
+		$GPUParticles2D.emitting=true
 		#Randomly select a marker 2d for the laser startin position
 		var laser_markers = $LaserStartPositions.get_children()
 		var selected_laser_position = laser_markers[randi() % laser_markers.size()]

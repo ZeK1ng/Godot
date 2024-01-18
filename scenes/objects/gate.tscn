@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://ck7swwil1qdqy"]
+[gd_scene load_steps=5 format=3 uid="uid://ck7swwil1qdqy"]
 
 [ext_resource type="Texture2D" uid="uid://dp8lthks814rh" path="res://graphics/objects/gate.png" id="1_0d1xn"]
 [ext_resource type="Script" path="res://scenes/objects/gate.gd" id="1_lqugp"]
+[ext_resource type="PackedScene" uid="uid://wd770j4j12at" path="res://scenes/objects/simple_light_turret.tscn" id="3_15ywu"]
+[ext_resource type="Texture2D" uid="uid://bvfr5iav45nvi" path="res://graphics/car/turret.png" id="3_jts45"]
 
 [node name="Gate" type="StaticBody2D"]
 collision_layer = 4
@@ -26,5 +28,25 @@ collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(-39.8754, 52.0956, -52.2715, -79.1688, 308.467, -177.899, 687.628, -277.424, 748.459, -150.856)
+
+[node name="SimpleLight" parent="." instance=ExtResource("3_15ywu")]
+position = Vector2(140, 297)
+rotation = -3.14159
+
+[node name="SimpleLight2" parent="." instance=ExtResource("3_15ywu")]
+position = Vector2(955, 295)
+rotation = -3.14159
+
+[node name="turret1" type="Sprite2D" parent="."]
+position = Vector2(142, 291)
+rotation = 3.14159
+scale = Vector2(0.493453, 0.412618)
+texture = ExtResource("3_jts45")
+
+[node name="turret2" type="Sprite2D" parent="."]
+position = Vector2(957, 297)
+rotation = 3.14159
+scale = Vector2(0.493453, 0.412618)
+texture = ExtResource("3_jts45")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqtacx6lvc86b"]
+[gd_scene load_steps=13 format=3 uid="uid://bqtacx6lvc86b"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sxof6"]
 [ext_resource type="Texture2D" uid="uid://cl4hrf6uyowxl" path="res://graphics/ground/stones.png" id="2_eimos"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://by7hpyyyiw424" path="res://scenes/players/player.tscn" id="4_pabu3"]
 [ext_resource type="Texture2D" uid="uid://lm3ri6qvqspp" path="res://graphics/tilesets/soil.png" id="4_x38ap"]
 [ext_resource type="PackedScene" uid="uid://deockl8fjb71x" path="res://scenes/objects/steamVent.tscn" id="5_rabw8"]
-[ext_resource type="Texture2D" uid="uid://bvfr5iav45nvi" path="res://graphics/car/turret.png" id="7_rnjwo"]
 [ext_resource type="PackedScene" uid="uid://djc8kefnq1tvu" path="res://scenes/houses/house.tscn" id="8_aquod"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_balnt"]
@@ -112,7 +111,7 @@ tile_set = SubResource("TileSet_l3v0r")
 collision_animatable = true
 format = 2
 layer_0/name = "soil"
-layer_0/tile_data = PackedInt32Array(-5, 65537, 1, -4, 65537, 1, -3, 65537, 1, -2, 65537, 1, -1, 65537, 1, -65536, 65537, 1, -65535, 65537, 1, -65534, 65537, 1, -65533, 65537, 1, -65532, 65537, 1, -65531, 65537, 1, -65530, 65537, 1, -65529, 65537, 1, -65541, 65537, 0, -65540, 65537, 0, -65539, 65537, 0, -65538, 65537, 0, -65537, 65537, 0, -131072, 65537, 0, -131071, 65537, 0, -131070, 65537, 0, -131069, 65537, 0, -131068, 65537, 0, -131067, 65537, 0, -131066, 65537, 0, -131065, 65537, 0)
+layer_0/tile_data = PackedInt32Array(-5, 65537, 1, -4, 65537, 1, -3, 65537, 1, -2, 65537, 1, -1, 65537, 1, -65536, 65537, 1, -65535, 65537, 1, -65534, 65537, 1, -65533, 65537, 1, -65532, 65537, 1, -65531, 65537, 1, -65530, 65537, 1, -65529, 65537, 1, -65541, 65537, 1, -65540, 65537, 1, -65539, 65537, 1, -65538, 65537, 1, -65537, 65537, 1, -131072, 65537, 1, -131071, 65537, 1, -131070, 65537, 1, -131069, 65537, 1, -131068, 65537, 1, -131067, 65537, 1, -131066, 65537, 1, -131065, 65537, 1, -131077, 65537, 1, -196613, 65537, 1, -262149, 65537, 1, -262148, 65537, 1, -262147, 65537, 1, -262146, 65537, 1, -262145, 65537, 1, -327680, 65537, 1, -327679, 65537, 1, -327678, 65537, 1, -327677, 65537, 1, -327676, 65537, 1, -327675, 65537, 1, -327674, 65537, 1, -327673, 65537, 1, -262137, 65537, 1, -196601, 65537, 1, -196602, 65537, 1, -196603, 65537, 1, -196604, 65537, 1, -196605, 65537, 1, -196606, 65537, 1, -196607, 65537, 1, -196608, 65537, 1, -131073, 65537, 1, -131074, 65537, 1, -131075, 65537, 1, -131076, 65537, 1, -196612, 65537, 1, -196611, 65537, 1, -196610, 65537, 1, -196609, 65537, 1, -262144, 65537, 1, -262143, 65537, 1, -262142, 65537, 1, -262141, 65537, 1, -262140, 65537, 1, -262139, 65537, 1, -262138, 65537, 1, -327685, 65537, 0, -393209, 65537, 0, -327684, 65537, 0, -327683, 65537, 0, -327682, 65537, 0, -327681, 65537, 0, -393216, 65537, 0, -393215, 65537, 0, -393214, 65537, 0, -393213, 65537, 0, -393212, 65537, 0, -393211, 65537, 0, -393210, 65537, 0)
 layer_1/name = "walls"
 layer_1/tile_data = PackedInt32Array(-65533, 0, 0, -65532, 65536, 0, -65531, 65536, 0, -65530, 65536, 0, -1, 131072, 0, -2, 65536, 0, -3, 65536, 0, -4, 65536, 0, -5, 65536, 2, -65529, 131072, 2, -65541, 0, 2, -131077, 0, 2, -196613, 0, 2, -262149, 0, 2, -131065, 0, 2, -196601, 0, 2, -262137, 0, 2, -327673, 0, 2, -327685, 65536, 1, -393209, 131072, 1, -327684, 65536, 0, -327683, 65536, 0, -327682, 65536, 0, -327681, 65536, 0, -393216, 65536, 0, -393215, 65536, 0, -393214, 65536, 0, -393213, 65536, 0, -393212, 65536, 0, -393211, 65536, 0, -393210, 65536, 0)
 
@@ -135,16 +134,6 @@ zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
 [node name="Projectiles" type="Node2D" parent="."]
-
-[node name="Turret" type="Sprite2D" parent="."]
-position = Vector2(-927, -223)
-rotation = 3.14159
-texture = ExtResource("7_rnjwo")
-
-[node name="Turret2" type="Sprite2D" parent="."]
-position = Vector2(2118, -192)
-rotation = 3.14159
-texture = ExtResource("7_rnjwo")
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
