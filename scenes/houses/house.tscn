@@ -1,11 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://djc8kefnq1tvu"]
+[gd_scene load_steps=10 format=3 uid="uid://djc8kefnq1tvu"]
 
 [ext_resource type="Texture2D" uid="uid://b4prx0o04sy06" path="res://graphics/tilesets/interior.png" id="1_2ybps"]
-[ext_resource type="PackedScene" uid="uid://deob7ercdpgsv" path="res://scenes/objects/wall_light.tscn" id="2_4b31d"]
+[ext_resource type="PackedScene" path="res://scenes/objects/wall_light.tscn" id="2_4b31d"]
 [ext_resource type="PackedScene" uid="uid://brw3laa5k4r50" path="res://scenes/objects/simple_light_blue.tscn" id="2_kxjsb"]
+[ext_resource type="PackedScene" uid="uid://dfrw7f2hw6hsf" path="res://scenes/objects/light_fan_animation.tscn" id="4_do2vn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eg86c"]
 size = Vector2(2841, 2809)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_14xlw"]
+polygon = PackedVector2Array(-195, -72, 195, -74, 195, 72, -195, 74)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y01lv"]
+polygon = PackedVector2Array(-195, -72, 195, -74, 195, 72, -195, 74)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mije0"]
 resource_name = "Interior"
@@ -25,6 +32,7 @@ texture_region_size = Vector2i(390, 390)
 3:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, 14, 61, -44, 129, -66, 195, -68, 195, 64, 151, 72, 105, 104, 73, 142, 67, 195, -75, 195, -51, 82)
 4:0/0 = 0
+4:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_14xlw")
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, -68, 195, -70, 195, 76, -195, 76)
@@ -69,6 +77,7 @@ texture_region_size = Vector2i(390, 390)
 3:2/0/physics_layer_0/angular_velocity = 0.0
 3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-77, -195, 67, -195, 77, -132, 117, -96, 161, -70, 195, -68, 195, 68, 137, 64, 79, 56, 25, 14, -29, -40, -55, -104)
 4:2/0 = 0
+4:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_y01lv")
 4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:2/0/physics_layer_0/angular_velocity = 0.0
 4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-195, -68, 195, -70, 195, 76, -195, 76)
@@ -175,6 +184,7 @@ texture_region_size = Vector2i(390, 390)
 
 [sub_resource type="TileSet" id="TileSet_yovp8"]
 tile_size = Vector2i(390, 390)
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_mije0")
@@ -203,3 +213,6 @@ rotation = 1.5708
 [node name="wall_light" parent="." instance=ExtResource("2_4b31d")]
 position = Vector2(1223, 898)
 rotation = 1.5708
+
+[node name="LightFanAnimation" parent="." instance=ExtResource("4_do2vn")]
+position = Vector2(771, 263)

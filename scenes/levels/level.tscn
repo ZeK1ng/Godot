@@ -120,16 +120,17 @@ position = Vector2(-100, 415)
 
 [node name="Gate" parent="." instance=ExtResource("4_0ejgr")]
 position = Vector2(27, -144)
+metadata/_edit_lock_ = true
 
 [node name="House" parent="." instance=ExtResource("8_aquod")]
-position = Vector2(-3841, 1638)
+position = Vector2(-4401, 1406)
 rotation = -1.5708
 
 [node name="Player" parent="." instance=ExtResource("4_pabu3")]
 position = Vector2(601, 515)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.6, 0.6)
+zoom = Vector2(0.5, 0.5)
 limit_left = -14000
 limit_top = -9000
 limit_right = 14000
@@ -138,6 +139,7 @@ position_smoothing_enabled = true
 editor_draw_limits = true
 
 [node name="Projectiles" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
