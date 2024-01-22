@@ -2,9 +2,6 @@ extends Node2D
 class_name ParentLevel
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://scenes/projectiles/grenade.tscn")
-var drone_scene: PackedScene = preload("res://scenes/enemies/drone.tscn")
-const default_player_zoom = Vector2(0.5,0.5)
-const house_player_zoom = Vector2(1,1)
 
 func _on_player_laser(laser_position, _laser_direction):
 	var laser = laser_scene.instantiate()

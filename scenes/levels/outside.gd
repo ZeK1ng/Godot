@@ -1,4 +1,7 @@
 extends ParentLevel
+var drone_scene: PackedScene = preload("res://scenes/enemies/drone.tscn")
+const default_player_zoom = Vector2(0.5,0.5)
+const house_player_zoom = Vector2(1,1)
 
 func _on_gate_player_entered_gate(body):
 	print("player entered gate")
