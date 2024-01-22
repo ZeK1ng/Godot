@@ -13,7 +13,7 @@ func _process(_delta):
 	move_and_slide()
 	
 func hit():
-	print("dmg")
+	queue_free()
 
 func _physics_process(_delta):
 	#var direction = Vector2.RIGHT
