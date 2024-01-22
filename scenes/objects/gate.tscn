@@ -27,7 +27,7 @@ scale = Vector2(0.5, 0.5)
 collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-39.8754, 52.0956, -52.2715, -79.1688, 308.467, -177.899, 687.628, -277.424, 748.459, -150.856)
+polygon = PackedVector2Array(-50.5328, 81.8684, -62.3097, -70.2674, 308.467, -177.899, 716.088, -287.12, 778.232, -140.198)
 
 [node name="SimpleLight" parent="." instance=ExtResource("3_15ywu")]
 position = Vector2(140, 297)

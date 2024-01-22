@@ -2,6 +2,8 @@ extends Node2D
 
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://scenes/projectiles/grenade.tscn")
+const default_player_zoom = Vector2(0.5,0.5)
+const house_player_zoom = Vector2(1,1)
 
 func _on_gate_player_entered_gate(body):
 	print("player entered gate")
@@ -22,3 +24,15 @@ func _on_player_grenade(grenade_position, grenade_direction):
 	grenade.linear_velocity = grenade.speed * grenade_direction
 	$Projectiles.add_child(grenade)
 
+
+
+func _on_house_player_entered():
+	set_player_zoom(house_player_zoom)
+
+
+func _on_house_player_exit():
+	set_player_zoom(default_player_zoom)
+	
+func set_player_zoom(zoom):
+	var tween = get_tree().create_tween()
+	tween.tween_property($Player/Camera2D,"zoom",zoom,1)

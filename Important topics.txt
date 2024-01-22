@@ -1,0 +1,2 @@
+tween can be used for lighweight animations instead of AnimationPlayer.
+tween_property(p1,p2,p3,p4) takes 4 params: the target node, the target propery of that node, the final value, and the duration. see its methods when needed

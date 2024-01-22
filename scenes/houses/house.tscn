@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://djc8kefnq1tvu"]
+[gd_scene load_steps=11 format=3 uid="uid://djc8kefnq1tvu"]
 
 [ext_resource type="Texture2D" uid="uid://b4prx0o04sy06" path="res://graphics/tilesets/interior.png" id="1_2ybps"]
-[ext_resource type="PackedScene" path="res://scenes/objects/wall_light.tscn" id="2_4b31d"]
+[ext_resource type="Script" path="res://scenes/houses/house.gd" id="1_pmsex"]
+[ext_resource type="PackedScene" uid="uid://deob7ercdpgsv" path="res://scenes/objects/wall_light.tscn" id="2_4b31d"]
 [ext_resource type="PackedScene" uid="uid://brw3laa5k4r50" path="res://scenes/objects/simple_light_blue.tscn" id="2_kxjsb"]
 [ext_resource type="PackedScene" uid="uid://dfrw7f2hw6hsf" path="res://scenes/objects/light_fan_animation.tscn" id="4_do2vn"]
 
@@ -191,6 +192,7 @@ sources/0 = SubResource("TileSetAtlasSource_mije0")
 
 [node name="House" type="Area2D"]
 collision_layer = 16
+script = ExtResource("1_pmsex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.5, -0.5)
@@ -216,3 +218,6 @@ rotation = 1.5708
 
 [node name="LightFanAnimation" parent="." instance=ExtResource("4_do2vn")]
 position = Vector2(771, 263)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
