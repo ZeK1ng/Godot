@@ -12,7 +12,6 @@ func _process(_delta):
 	move_and_slide()
 	look_at(get_global_mouse_position())
 	handle_actions()
-	
 		
 func handle_actions():
 	if Input.is_action_pressed("sprint"):
@@ -40,7 +39,6 @@ func handle_actions():
 
 func _on_grenade_timer_timeout():
 	has_grenade = true
-
 
 func _on_laser_timer_timeout():
 	has_laser = true

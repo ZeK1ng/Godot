@@ -20,18 +20,14 @@ func _on_player_laser(laser_position, _laser_direction):
 	laser.rotation_degrees = rad_to_deg(_laser_direction.angle()) +90
 	$Projectiles.add_child(laser)
 
-
 func _on_player_grenade(grenade_position, grenade_direction):
 	var grenade = grenade_scene.instantiate() as RigidBody2D
 	grenade.position = grenade_position
 	grenade.linear_velocity = grenade.speed * grenade_direction
 	$Projectiles.add_child(grenade)
 
-
-
 func _on_house_player_entered():
 	set_player_zoom(house_player_zoom)
-
 
 func _on_house_player_exit():
 	set_player_zoom(default_player_zoom)
@@ -39,7 +35,6 @@ func _on_house_player_exit():
 func set_player_zoom(zoom):
 	var tween = get_tree().create_tween()
 	tween.tween_property($Player/Camera2D,"zoom",zoom,1)
-
 
 func _on_drone_spawn_timer_timeout():
 	var drone = drone_scene.instantiate() as CharacterBody2D
