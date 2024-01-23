@@ -8,6 +8,9 @@ script = ExtResource("1_sxof6")
 
 [node name="Ground" type="Node2D" parent="."]
 
+[node name="Projectiles" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
 [node name="Player" parent="." instance=ExtResource("4_pabu3")]
 position = Vector2(601, 515)
 
@@ -19,9 +22,6 @@ limit_right = 14000
 limit_bottom = 9000
 position_smoothing_enabled = true
 editor_draw_limits = true
-
-[node name="Projectiles" type="Node2D" parent="."]
-metadata/_edit_lock_ = true
 
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
