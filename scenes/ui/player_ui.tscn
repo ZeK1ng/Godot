@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmm6opgnmvdyx"]
+[gd_scene load_steps=7 format=3 uid="uid://bmm6opgnmvdyx"]
 
+[ext_resource type="Script" path="res://scenes/ui/player_ui.gd" id="1_5kyfb"]
 [ext_resource type="Theme" uid="uid://d34ak1femsjja" path="res://scenes/ui/fonts/new_theme.tres" id="1_7aev3"]
 [ext_resource type="Texture2D" uid="uid://dv0mbnlw5ag78" path="res://graphics/ui/bullet.png" id="1_pbm5p"]
 [ext_resource type="Texture2D" uid="uid://djvwx7vhhwqap" path="res://graphics/ui/grenade.png" id="2_fwtql"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bdvagjocw54my" path="res://graphics/ui/progress_bar/progress.png" id="5_gypp2"]
 
 [node name="PlayerUI" type="CanvasLayer"]
+script = ExtResource("1_5kyfb")
 
 [node name="Laser Counter" type="Control" parent="."]
 layout_mode = 3
@@ -30,8 +32,6 @@ grow_vertical = 0
 [node name="Label" type="Label" parent="Laser Counter/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_7aev3")
-text = "20
-"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -57,8 +57,6 @@ offset_bottom = 40.0
 [node name="Label" type="Label" parent="Grenade Counter/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_7aev3")
-text = "5
-"
 horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Grenade Counter/VBoxContainer"]
