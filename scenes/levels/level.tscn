@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqtacx6lvc86b"]
+[gd_scene load_steps=4 format=3 uid="uid://bqtacx6lvc86b"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_sxof6"]
+[ext_resource type="PackedScene" uid="uid://bmm6opgnmvdyx" path="res://scenes/ui/player_ui.tscn" id="3_5opc5"]
 [ext_resource type="PackedScene" uid="uid://by7hpyyyiw424" path="res://scenes/players/player.tscn" id="4_pabu3"]
 
 [node name="Level" type="Node2D"]
@@ -22,6 +23,8 @@ limit_right = 14000
 limit_bottom = 9000
 position_smoothing_enabled = true
 editor_draw_limits = true
+
+[node name="PlayerUI" parent="." instance=ExtResource("3_5opc5")]
 
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]

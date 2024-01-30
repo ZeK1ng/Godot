@@ -1,2 +1,7 @@
 tween can be used for lighweight animations instead of AnimationPlayer.
 tween_property(p1,p2,p3,p4) takes 4 params: the target node, the target propery of that node, the final value, and the duration. see its methods when needed
+
+canvasLayer -> ignores camera, UI property. 
+2 ways to place a control node -> Anchors and containers.
+Anchors are the green needles in the topleft of a control node
+Containers -> parent nodes that determine the position of their children
