@@ -6,7 +6,7 @@ const default_player_zoom = Vector2(0.5,0.5)
 const house_player_zoom = Vector2(1,1)
 
 func _on_gate_player_entered_gate(body):
-	get_tree().change_scene_to_packed(inside_scene)
+	LevelTransitionLayer.change_scene("res://scenes/levels/inside.tscn")
 	
 # Called when the node enters the scene tree for the first time.	
 func _ready():

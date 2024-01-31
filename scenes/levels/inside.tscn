@@ -17,7 +17,6 @@ size = Vector2(1440, 865)
 
 [node name="Inside Level" instance=ExtResource("1_21vc8")]
 script = ExtResource("2_g8t2g")
-outside_level_scene = null
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" index="0"]
 position = Vector2(2748.5, 336)
