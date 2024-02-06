@@ -27,3 +27,6 @@ func updateColor(lable, icon, ammo_count):
 	if ammo_count == 0:
 		lable.modulate = red
 		icon.modulate = red
+	else:
+		lable.modulate = green
+		icon.modulate = green
