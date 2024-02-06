@@ -18,6 +18,7 @@ func _ready():
 func reload_ammo():
 	update_laser_text()
 	update_grenade_text()
+	
 func update_laser_text():
 	laser_lable.text = str(Globals.laser_current_ammo)
 	updateColor(laser_lable, laser_ammo_icon, Globals.laser_current_ammo)
