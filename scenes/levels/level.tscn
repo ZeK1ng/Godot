@@ -28,4 +28,3 @@ editor_draw_limits = true
 
 [connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
-[connection signal="reload" from="Player" to="." method="_on_player_reload"]

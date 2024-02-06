@@ -8,13 +8,16 @@ var green:Color = Color("4f932f")
 var red:Color = Color("a94308")
 
 func _ready():
+	Globals.connect("reload",reload_ammo)
 	laser_lable.text = str(Globals.laser_current_ammo)
 	grenade_lable.text = str(Globals.grenade_current_ammo)
 	laser_lable.modulate = green
 	grenade_lable.modulate = green
 	laser_ammo_icon.modulate = green
 	grenade_ammo_icon.modulate = green
-	
+func reload_ammo():
+	update_laser_text()
+	update_grenade_text()
 func update_laser_text():
 	laser_lable.text = str(Globals.laser_current_ammo)
 	updateColor(laser_lable, laser_ammo_icon, Globals.laser_current_ammo)

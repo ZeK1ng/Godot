@@ -4,7 +4,6 @@ var has_laser = true
 var player_speed = 500
 signal laser(laser_position, laser_direction)
 signal grenade(grenade_position, grenade_direction)
-signal reload()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	var direction = Input.get_vector("left","right","up","down")
@@ -42,7 +41,6 @@ func handle_actions():
 	if Input.is_action_pressed("reload"):
 		Globals.laser_current_ammo = Globals.laser_max_ammo
 		Globals.grenade_current_ammo = Globals.grenade_max_ammo
-		reload.emit()
 		
 func _on_grenade_timer_timeout():
 	has_grenade = true
